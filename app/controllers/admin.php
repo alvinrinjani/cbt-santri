@@ -14,9 +14,17 @@ class admin extends Controller
 
     public function index()
     {
-        $data['user'] = $data['user'] = $this->model('AdminModel')->getAllUser();
+        $data['user'] = $this->model('AdminModel')->getAllUser();
         
         $this->view('admin/index', $data);
+    }
+
+    public function listUsers()
+    {
+        $data['user'] = $this->model('AdminModel')->getAllUser();
+        $data['table'] = DB_TABLE;
+
+        $this->view('admin/listUsers', $data);
     }
     
     public function inputUsers()
