@@ -1,0 +1,54 @@
+.ubuntu {
+    font-family: 'Ubuntu', sans-serif !important;
+}
+
+#login-square {
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
+    margin: auto;
+    margin-top: 100px;
+    position: relative;
+    /* padding: 30px 30px; */
+}
+
+#login-square .login-input {
+    position: relative;
+    margin: auto;
+    margin-top: 100px;
+}
+
+#button-centered {
+    margin: auto !important;
+    position: relative;
+}
+
+.mt-100 {
+    margin-top: 100px;
+}
+
+.mt-200 {
+    margin-top: 200px;
+}
+
+/* styling text */
+.text-center {
+    text-align: center !important;
+}
+
+.text-capitalize {
+    text-transform: capitalize;
+}
+
+.please-login {
+    color: #a60000;
+    font-size: x-large;
+}
+
+.text-marun {
+    color: #a60000;
+}
+
+.card-title .text-marun {
+    font-size: 45px;
+}

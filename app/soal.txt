@@ -1,0 +1,191 @@
+{{Done}} 1. Sebutkan jenis-jenis tipe data pada bahasa pemrograman PHP, kemudian buatkan contohnya ke dalam variabel (satu tipe data, satu variable)!
+===============================================================================
+{{Done}} 2. Seorang raja minyak bernama Mohammed Bin Zayed memiliki hobi koleksi mobil Ferrari. Beberapa model Ferrari yang dimilkinya yaitu Ferrari 812 GTS, Ferrari SF90 Stradale, Ferrari F8 Spider, Ferrari 458 Speciale, dan Ferrari 599XX Evolution.
+Buatkan code program php (dengan teknik looping array) sehingga menghasikan output berikut:
+5 Mobil Ferarri milik Mohammed Bin Zayed, yaitu:
+Ferrari 812 GTS
+Ferrari SF90 Stradale
+Ferrari F8 Spider
+Ferrari 458 Speciale
+Ferrari 599XX Evolution
+===============================================================================
+{{Done}} 3. Seorang analisis penjualan motor melakukan survey terhadap merk motor yang paling laris di Indonesia. Dari hasil surveynya didapat kesimpulan bahwa lima merk yang terlaris berturut-turut adalah: Yahama, Honda, Suzuki, Kawasaki, dan TVS.
+Buatkan code program php (dengan teknik looping array) sehingga menghasikan output berikut:
+Daftar Nama Merk Motor Paling Laris di Indonesia:
+Yahama
+Honda
+Suzuki
+Kawasaki
+TVS
+===============================================================================
+{{Done}} 4. Fata dan Biru memiliki kelereng masing-masing 15 dan 10 butir.
+Buatkan code program php (dengan teknik penjumlahan variable) sehingga menghasikan output berikut:
+Kelereng Fata: 15 butir.
+Kelereng Biru: 10 butir.
+Jumlah kelereng keduanya adalah 25 butir.
+===============================================================================
+{{Done}} 5. Fulan-A dan Fulan-B mengumpulkan infaq untuk saudara-saudara di Palestina yang sedang dizholimi oleh lakatullah Yahudi Zionis Isrel. Masing-masing infaq mereka adalah Rp. 500000,- dan Rp. 750000,-.
+Buatkan code program php (dengan teknik penjumlahan variable) sehingga menghasikan output berikut:
+Infaq Fulan-A: Rp. 500000,-
+Infaq Fulan-B: Rp. 750000,-
+Jumlah infaq keduanya adalah sebesar Rp. 1250000,-
+===============================================================================
+{{Done}} 6. Setelah dilakukan ujian semester, diketahui nilai santri bernama Adam = 90, Idris = 80, Nuh = 85, Hud = 80, dan Shaleh = 95.  
+Buatkan code program php (dengan teknik looping array) sehingga menghasikan output berikut:
+Nilai ujian Shaleh: 95
+Nilai ujian Adam: 90
+Nilai ujian Nuh: 85
+Nilai ujian Idris: 80
+Nilai ujian Hud: 80
+===============================================================================
+{{Done}} 7. Setelah dilakukan ujian semester, diketahui nilai santri bernama Ibrahim = 90, Luth = 70, Ismail = 50, Ishaq = 80, dan Yaqub = 75. Jika nilai lebih besar dari 70 maka dinyatakan lulus, dan jika kurang dari 70 maka tidak lulus.
+Buatkan code program php (dengan teknik pengkondisian if else) sehingga menghasikan output berikut:
+Santri bernama Ibrahim dinyatakan lulus.
+Santri bernama Luth dinyatakan lulus.
+Santri bernama Ismail dinyatakan tidak lulus.
+Santri bernama Ishaq dinyatakan lulus.
+Santri bernama Yaqub dinyatakan lulus.
+===============================================================================
+{{Done}} 8. Una, Qisthy, dan Jily memiliki kelereng masing-masing 7, 10, 11.
+Buatkan code program php (dengan teknik pengkondisian if else) sehingga menghasikan output berikut:
+Kelereng Una berjumlah ganjil.
+Kelereng Qisthy berjumlah genap.
+Kelereng Jily berjumlah ganjil.
+===============================================================================
+{{Done}} 9. Buatlah perulangan (looping) dari bilangan 1 sampai 100, yang apabila bilangan tersebut ganjil maka ditambahkan string "is odd number" dan apabila genap ditambahkan string "is even number" setelah bilangan tersebut.
+Contoh output:
+1 is odd number.
+2 is even number
+3 is odd number.
+4 is even number
+5 is odd number.
+6 is even number
+7 is odd number.
+8 is even number
+9 is odd number.
+10 is even number
+11 is odd number.
+12 is even number.
+...
+...
+...
+97 is odd number.
+98 is even number
+99 is odd number.
+100 is even number.
+===============================================================================
+{{Done}} 10. Buatlah perulangan (looping) menurun dari bilangan 55 sampai 0, yang apabila bilangan tersebut ganjil maka ditambahkan string "adalah bilangan ganjil" dan apabila genap ditambahkan string "adalah bilangan genap" setelah bilangan tersebut.
+Contoh output:
+55 adalah bilangan ganjil.
+54 adalah bilangan genap
+53 adalah bilangan ganjil.
+52 adalah bilangan genap
+51 adalah bilangan ganjil.
+50 adalah bilangan genap
+49 adalah bilangan ganjil.
+48 adalah bilangan genap
+47 adalah bilangan ganjil.
+46 adalah bilangan genap
+45 adalah bilangan ganjil.
+44 adalah bilangan genap.
+...
+...
+...
+3 adalah bilangan ganjil.
+2 adalah bilangan genap
+1 adalah bilangan ganjil.
+0 adalah bilangan genap.
+===============================================================================
+{{Done}} 11. Buatlah perulangan (looping) dari bilangan 111 sampai 150, yang apabila bilangan tersebut habis dibagi 3 maka akan muncul output seperti berikut:
+Bilangan 111 merupakan kelipatan 3
+Bilangan 114 merupakan kelipatan 3
+Bilangan 117 merupakan kelipatan 3
+Bilangan 120 merupakan kelipatan 3
+...
+...
+...
+Bilangan 141 merupakan kelipatan 3
+Bilangan 114 merupakan kelipatan 3
+Bilangan 117 merupakan kelipatan 3
+Bilangan 150 merupakan kelipatan 3
+===============================================================================
+{{Done}} 12. Seorang pedagang menjual salah satu barang dagangannya dengan harga Rp. 750.000,-. Jika ia hendak memberikan diskon 15% pada barang tersebut, berapa harga barang setelah di diskon? Buatkan sebuah function dengan php yang dapat memberikan output yang sesuai!
+===============================================================================
+{{Done}} 13. Seorang pedangan menjual salah satu barang dagangannya dengan harga Rp. 500.000,-. Jika ia menjual dengan harga Rp. 375.000,-, berapa persen pedagang tersebut memberikan diskon pada barang dagangannya? Buatkan sebuah function dengan php yang dapat memberikan output yang sesuai!
+===============================================================================
+{{Done}} 14. Harga suatu barang yang telah diberikan diskon adalah Rp. 875.000,-. Jika diskon pada barang tersebut adalah 12.5%, berapa harga asli barang sebelum diskon? Buatkan sebuah function dengan php yang dapat memberikan output yang sesuai!
+===============================================================================
+{{Done}} 15. Seorang anak baru saja dan diberi nama "Muhammad al-Mahdi". Nama bapaknya adalah "Abdurrozzaq al-Buquri" dan ibunya bernama "Aminah Khoiruz Zahra". Berapa jumlah total huruf pada nama anak, ibu, dan bapak tersebut? Buatkan sebuah function dengan php yang dapat memberikan output yang sesuai!
+===============================================================================
+{{Done}} 16. Perhatikan code php berikut:
+
+<?php
+
+$data1 = 555;
+$data2 = '725';
+
+function kali ($x, $y) {
+    $hasil = $x * $y;
+    return $hasil;
+}
+
+echo kali($data1, $data2);
+
+?>
+
+Perbaiki code tersebut agar tidak error sehingga menghasilkan output: 402375!
+===============================================================================
+{{Done}} 17. Perhatikan code php berikut:
+
+<?php
+
+$data1 = 10.15;
+$data2 = '25.75';
+$data3 = '45.50';
+
+function jumlah ($x, $y) {
+    $hasil = $x + $y;
+    return $hasil;
+}
+
+echo jumlah();
+
+?>
+
+Perbaiki code tersebut agar tidak error sehingga menghasilkan output: 71.25!
+===============================================================================
+{{Done}} 18. Perhatikan code php berikut:
+
+<?php
+
+$nama1 = 'Ahmad Mahmud';
+$nama2 = 'Razmi Alfi';
+$nama3 = 'Abdullah Abduh ';
+
+?>
+
+Buatlah pengkondisian (decision making) jika jumlah huruf pada nama tersebut (setelah dikurangi spasi) lebih dari 10 karakter, maka tampilkan nama tersebut, dan jika hurufnya kurang dari 10 karakter maka nama tidak perlu ditampilkan.
+===============================================================================
+{{Done}} 19. Perhatikan code php berikut:
+
+<?php
+    $nama1 = 'Ailri Riza';
+    $nama2 = 'Faudah Ramzi';
+    $nama3 = 'Subqi Wardana';
+?>
+
+Buatlah function yang dapat menghitung jumlah karakter huruf dari nama-nama tersebut sehingga menghasilkan output yang benar!
+===============================================================================
+{{Done}} 20. Perhatikan code php berikut:
+
+<?php
+$kondisi2 = 50;
+$angka1 = 35;
+$angka3 = 88;
+if ($kondisi == 50) {
+    $hasil  = $kondisi2 - $angka1;
+    echo $hasil;
+}
+?>
+
+Sempurnakan code tersebut agar tidak error dengan kondisi apabila $kondisi lebih kecil dari 50 maka akan menghasilkan output: 15, dan apabila lebih besar maka menghasilkan output: 123. 
