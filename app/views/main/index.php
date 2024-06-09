@@ -11,39 +11,30 @@
 
     <!-- Style CSS -->
     <link rel="stylesheet" href="<?= BASEURL; ?>public/css/style.css">
-    <title>Main Page | ATCO 1</title>
+    <title>UJIAN AKHIR | PRISTAC 2</title>
   </head>
   <body>
     <div class="container mt-100">
       <h3><?= $data['user']['username']; ?></h3>
-        <div class="card">
-            <div class="card-header text-center">Soal</div>
-            <div class="card-body">
-              <p class="px-5">
-                <?php highlight_file('public/questions/' . $data['user']['question']); ?>
-              </p>
-            </div>
-            <div class="card-footer text-center">
-                Jawaban
-            </div>
-            <div class="card-body">
-
-            <?php if($data['user']['login_status'] == NULL): ?>
-            <form action="main/submitAnswer" method="post" enctype="multipart/form-data">
-                <div class="input-group mb-3">
-                    <input type="hidden" class="form-control" name="usersession" value="<?= $data['user']['usersession']; ?>">
-                    <input type="file" class="form-control" placeholder="Upload Jawaban" name="answer">
-                    <button type="submit" class="btn btn-success">Submit Jawaban</button>
+        <form action="main/submitAnswer" method="post" enctype="multipart/form-data">
+            <div class="card">
+                <div class="card-header text-center">UPLOAD JAWABAN</div>
+                <div class="card-body">
+                    <p class="px-5">
+                        <label for="a1" class="form-label">Jawaban No. 1</label>
+                        <input class="form-control" type="file" id="a1" name="a1">
+                        <br>
+                        <label for="a2" class="form-label">Jawaban No. 2</label>
+                        <input class="form-control" type="file" id="a2" name="a2">
+                        <input type="hidden" name="usersession" value="<?= $data['user']['usersession']?>">
+                        <br><br>
+                    </p>
                 </div>
-            </form>
-            <?php elseif($data['user']['login_status'] === '2'): ?>
-              <div class="row text-center justify-content-center">
-                  <a href="login/logout" class="text-center col-6"><button type="button" class="btn btn-danger col-6">Logout</button></a>
-              </div>
-            <?php endif; ?>
-
-            </div>
+                <div class="card-footer text-center">
+                    <button type="submit" name="submit" class="btn btn-primary">KIRIM</button>
+                </div>
         </div>
+        </form>
     </div>
 
     

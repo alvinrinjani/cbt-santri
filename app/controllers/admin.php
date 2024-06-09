@@ -37,6 +37,14 @@ class admin extends Controller
             exit;
        }
     }
+
+    public function listUsers()
+    {
+        $data['user'] = $this->model('AdminModel')->getAllUser();
+        $data['table'] = DB_TABLE;
+
+        $this->view('admin/listUsers', $data);
+    }
 }
 
 ?>
