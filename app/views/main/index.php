@@ -19,6 +19,12 @@
         <form action="main/submitAnswer" method="post" enctype="multipart/form-data">
             <div class="card">
                 <div class="card-header text-center">UPLOAD JAWABAN</div>
+                <?php if($data['user']['login_status'] == '2'): ?>
+                    <h3 class="text-center my-3 text-green">Anda telah mengirimkan jawaban. Terima kasih!</h3>
+                    <div class="card-footer text-center">
+                            <a href="login/logout"><button type="button" class="btn btn-info">LOGOUT</button></a>
+                    </div>
+                <?php else: ?>
                 <div class="card-body">
                     <p class="px-5">
                         <label for="a1" class="form-label">Jawaban No. 1</label>
@@ -33,6 +39,7 @@
                 <div class="card-footer text-center">
                     <button type="submit" name="submit" class="btn btn-primary">KIRIM</button>
                 </div>
+                <?php endif; ?>
         </div>
         </form>
     </div>

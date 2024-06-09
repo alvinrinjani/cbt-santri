@@ -96,10 +96,10 @@ class UsersModel
                 chmod($a2targetDir . $a2Name, 0777);
 
             } else {
-                return CODE_2;
+                return false;
             }
         } else {
-            return CODE_2;
+            return false;
         }
 
         $sql = "UPDATE {$this->table} SET
