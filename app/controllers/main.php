@@ -25,11 +25,11 @@ class main extends Controller
 
         if ($this->model('UsersModel')->submitAnswer($_POST) > 0) {
             echo $this->successSubmit;
-            echo "<meta http-equiv='refresh' content='1;URL=" . BASEURL . "main'>";
+            echo "<meta http-equiv='refresh' content='0;URL=" . BASEURL . "main'>";
             exit;
        } else {
             echo $this->failedSubmit;
-            echo "<meta http-equiv='refresh' content='1;URL=" . BASEURL . "main'>";
+            echo "<meta http-equiv='refresh' content='0;URL=" . BASEURL . "main'>";
             exit;
        }
     }
