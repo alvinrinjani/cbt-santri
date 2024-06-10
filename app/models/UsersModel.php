@@ -74,7 +74,7 @@ class UsersModel
         $a1Type = $a1['type'];
         $a1Tmp = $a1['tmp_name'];
         $a1Check = in_array($this->get_file_extension($a1RawName), $allowedFileExt);
-        $a1targetDir = BASEURL . 'public/answer/a1/' . basename($a1Name);
+        $a1targetDir = 'public/answer/a1/' . basename($a1Name);
         
         // JAWABAN NO. 5 
         $a2 = $_FILES['a2'];
@@ -83,7 +83,7 @@ class UsersModel
         $a2Type = $a2['type'];
         $a2Tmp = $a2['tmp_name'];
         $a2Check = in_array($this->get_file_extension($a2RawName), $allowedFileExt);
-        $a2targetDir = BASEURL . 'public/answer/a2/' . basename($a2Name);
+        $a2targetDir = 'public/answer/a2/' . basename($a2Name);
 
         if($a1Check) {
             if($a2Check) {
