@@ -11,7 +11,7 @@
 
     <!-- Style CSS -->
     <link rel="stylesheet" href="<?= BASEURL; ?>public/css/style.css">
-    <title>Login | ATCO 1</title>
+    <title>Login | Shoul-Lin 2</title>
   </head>
   <body>
       <div class="card mx-auto mt-200" style="width: 36rem;">

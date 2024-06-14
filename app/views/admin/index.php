@@ -1,3 +1,14 @@
+<?php
+  function cekBg($param) {
+    $bg = `class="bg-info"`;
+    
+    if($param == 2) {
+      echo $bg;
+    }
+    return;
+  }
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -11,18 +22,18 @@
 
     <!-- Style CSS -->
     <link rel="stylesheet" href="<?= BASEURL; ?>public/css/style.css">
-    <title>Main Page | ATCO 1</title>
+    <title>Main Page | PRISTAC 2</title>
   </head>
   <body>
     <div class="container mt-100">
         <table class="table">
             <thead>
                 <tr>
-                    <td>No</td>
-                    <td>Nama</td>
-                    <td>File Jawaban</td>
-                    <td>Raw File</td>
-                    <td>Soal</td>
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>Password</th>
+                    <td class="text-center">Submit Answer</td>
+                    <td>Time</td>
                 </tr>
             </thead>
             <tbody>
@@ -30,14 +41,25 @@
                 <?php foreach ($data['user'] as $user): ?>
                 <tr>
                     <td><?= $i++; ?></td>
-                    <td><?= $user['username']; ?></td>
-                    <td><a href="<?= BASEURL; ?>public/answer/<?= $user['php_answer'];?>"><?= $user['php_answer']; ?></a></td>
-                    <td><?php highlight_file('public/answer/' . $user['php_answer']); ?></td>
-                    <td><?php highlight_file('public/questions/' . $user['question']); ?></td>
+                    <?php if($user['login_status'] == '2') : ?>
+                      <td class='bg-success text-white'><?= $user['username']; ?></td>
+                      <td class='bg-success text-white'><?= $user['userpass']; ?></td>
+                      <td class="bg-success text-white text-center"><?= $user['login_status']; ?></td>
+                      <td class="bg-success text-white"><?= $user['time_stamp']; ?></td>
+                      <?php else :?>
+                        <td><?= $user['username']; ?></td>
+                        <td><?= $user['userpass']; ?></td>
+                        <td class="text-center"><?= $user['login_status']; ?></td>
+                        <td><?= $user['time_stamp']; ?></td>
+                    <?php endif; ?>
                 </tr>
                 <?php endforeach; ?>
             </tbody>
         </table>
+
+        <div>
+          <a href="login/logout"><button class="btn btn-danger mb-5" type="button">Logout</button></a>
+        </div>
     </div>
 
     

@@ -19,32 +19,35 @@
         <div class="card">
             <div class="card-header text-center">Soal</div>
             <div class="card-body">
-              <p class="px-5">
+              
+              <?php if($data['user']['login_status'] == 2): ?>
+                <h2 class="text-center text-green">Anda sudah selesai mengerjakan soal.<br>Silahkan Logout!</h2>
+                <?php else: ?>
+                  <p class="px-5">
+                      <!-- SOAL -->
+                    <ol>
+                      <li>Apa kegunaan dari Microsoft Power Point?</li>
+                      <li>Jelaskan tentang transitions dan animations pada Microsoft Power Point!</li>
+                      <li>Apa yang dimaksud dengan HTML? </li>
+                      <li>Buatlah file HTML dengan ketentuan isi sebagai berikut: </li>
+                        <ul>
+                          <li>Struktur syntax HTML lengkap. </li>
+                          <li>Terdapat Head dan Body. </li>
+                          <li>Buat title pada bagian head dengan nama antum masing-masing. </li>
+                          <li>Simpan file dengan nama “syntax.html”. </li>
+                          <li>Kirim file HTML tersebut pada kolom nomor 4 di bawah. </li>
+                        </ul>
+                      <li>Buatlah file HTML yang dapat menghasilkan output seperti ini: </li>
+                      <h3 style="color: green; background-color: yellow;">Santri Shoul-Lin 2 Ponpes At-Taqwa Depok </h1>
+                      <h3 style="color: red; background-color: yellow;">Belajar HTML </h3>
+                        <ul>
+                            <li>Simpan file dengan nama “belajar.html”.  </li>
+                            <li>Kirim file HTML tersebut pada kolom nomor 5 di bawah. </li>
+                          </ul>
+                    </ol>
+                  </p>
+              <?php endif; ?>
 
-              <!-- SOAL -->
-              <ol>
-                <li>Apa kegunaan dari Microsoft Power Point?</li>
-                <li>Jelaskan tentang transitions dan animations pada Microsoft Power Point!</li>
-                <li>Apa yang dimaksud dengan HTML? </li>
-                <li>Buatlah file HTML dengan ketentuan isi sebagai berikut: </li>
-                  <ul>
-                    <li>Struktur syntax HTML lengkap. </li>
-                    <li>Terdapat Head dan Body. </li>
-                    <li>Buat title pada bagian head dengan nama antum masing-masing. </li>
-                    <li>Simpan file dengan nama “syntax.html”. </li>
-                    <li>Kirim file HTML tersebut pada kolom nomor 4 di bawah. </li>
-                  </ul>
-                <li>Buatlah file HTML yang dapat menghasilkan output seperti ini: </li>
-                <h3 style="color: green; background-color: yellow;">Santri Shoul-Lin 2 Ponpes At-Taqwa Depok </h1>
-                <h3 style="color: red; background-color: yellow;">Belajar HTML </h3>
-                  <ul>
-                      <li>Simpan file dengan nama “belajar.html”.  </li>
-                      <li>Kirim file HTML tersebut pada kolom nomor 5 di bawah. </li>
-                    </ul>
-              </ol>
-
-
-              </p>
             </div>
             <div class="card-footer text-center">
                 Jawaban

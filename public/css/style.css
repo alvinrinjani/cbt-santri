@@ -49,6 +49,10 @@
     color: #a60000;
 }
 
+.text-green {
+    color: green;
+}
+
 .card-title .text-marun {
     font-size: 45px;
 }

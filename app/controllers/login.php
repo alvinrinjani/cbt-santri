@@ -2,6 +2,8 @@
 
 class login extends Controller
 {
+    private $failedLogin = "<script>alert('Username atau Password salah. Coba lagi!');</script>";
+
     public function __construct()
     {
         if (isset($_SESSION['user'])) {
@@ -28,7 +30,8 @@ class login extends Controller
                 header('Location: '. BASEURL . 'main');
             }
         } else {
-            $this->view('login/index');
+            echo $this->failedLogin;
+            echo "<meta http-equiv='refresh' content='0;URL=" . BASEURL . "login'>";
         }
 
     }

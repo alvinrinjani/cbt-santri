@@ -61,6 +61,14 @@ class UsersModel
         return substr($file_name, $dot_index);
     }
 
+    function removeChar($str) 
+    {
+        $char = ["'", '"', '`'];
+        $result = str_replace($char, '', $str);
+    
+        return $result;
+    }
+
     public function submitAnswer()
     {
         $usersession = $_POST['usersession'];
@@ -68,9 +76,9 @@ class UsersModel
         $time_stamp = $this->time_stamp();
 
         // JAWABAN ESSAY 1 - 3
-        $a1 = $_POST['a1'];
-        $a2 = $_POST['a2'];
-        $a3 = $_POST['a3'];
+        $a1 = $this->removeChar($_POST['a1']);
+        $a2 = $this->removeChar($_POST['a2']);
+        $a3 = $this->removeChar($_POST['a3']);
 
         // JAWABAN NO. 4
         $a4 = $_FILES['a4'];
@@ -79,7 +87,8 @@ class UsersModel
         $a4Type = $a4['type'];
         $a4Tmp = $a4['tmp_name'];
         $a4Check = in_array($this->get_file_extension($a4RawName), $allowedFileExt);
-        $a4targetDir = 'public/answer/a4/' . basename($a4Name);
+        $a4DirName = 'public/answer/a4/';
+        $a4targetDir = $a4DirName . basename($a4Name);
         
         // JAWABAN NO. 5 
         $a5 = $_FILES['a5'];
@@ -88,32 +97,50 @@ class UsersModel
         $a5Type = $a5['type'];
         $a5Tmp = $a5['tmp_name'];
         $a5Check = in_array($this->get_file_extension($a5RawName), $allowedFileExt);
-        $a5targetDir = 'public/answer/a5/' . basename($a5Name);
-
-        var_dump($a5Tmp);
-        die;
+        $a5DirName = 'public/answer/a5/';
+        $a5targetDir = $a5DirName . basename($a5Name);
 
 
+        if ($a4Check) {
+            if ($a5Check) {
 
+                //exec this code below to upload file | don't forget to chmod 777 for dirName :)
+                move_uploaded_file($a4Tmp, $a4targetDir);
+                move_uploaded_file($a5Tmp, $a5targetDir);
+                chmod($a4targetDir . $a4Name, 0777);
+                chmod($a5targetDir . $a5Name, 0777);
+                
+            } else {
+                return false;
+            }
+        }  else {
+            return false;
+        }
 
-        // if(!$a4Check && $a4Type != 'text/html') {
-        //     return false;
-        // } else {
-        //     move_uploaded_file($a4Tmp, $targetDir);
-        //     chmod($targetDir . $a4Name, 0777);
-        // }
+        if (file_exists($a4targetDir)) {
+            if (file_exists($a5targetDir)) {
 
-        $sql = "UPDATE {$this->table} SET 
-                php_answer = '$a4Name',
-                login_status = '2',
-                time_stamp = '$time_stamp' 
-                WHERE usersession = '$usersession'
-        ";
+                //exec this code below for insert to database 
+                $sql = " UPDATE {$this->table} SET 
+                        login_status = 2,
+                        a1 = '$a1',
+                        a2 = '$a2',
+                        a3 = '$a3',
+                        time_stamp = '$time_stamp'
+                        WHERE usersession = '$usersession'
+                ";
 
-        $this->db->query($sql);
-        $this->db->execute();
+                $this->db->query($sql);
+                $this->db->execute();
 
-        return $this->db->rowCount();
+                return $this->db->rowCount();
+
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
     }
-    
+
 }

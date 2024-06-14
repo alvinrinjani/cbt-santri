@@ -2,6 +2,9 @@
 
 class main extends Controller
 {
+    private $successSubmit = "<script>alert('Jawaban berhasil dikirim! Terima kasih.');</script>";
+    private $failedSubmit = "<script>alert('Gagal mengirimkan jawaban! Coba lagi.');</script>";
+
     public function __construct()
     {
         Sessioner::logSession();
@@ -16,13 +19,17 @@ class main extends Controller
 
     public function submitAnswer()
     {
+        $data['user'] = $this->model('UsersModel')->getSingleUser($_SESSION['user']);
+
+        $this->view('main/index', $data);
+
         if ($this->model('UsersModel')->submitAnswer($_POST) > 0) {
-            // echo 'success';
-            echo "<meta http-equiv='refresh' content='1;URL=" . BASEURL . "main'>";
+            echo $this->successSubmit;
+            echo "<meta http-equiv='refresh' content='0;URL=" . BASEURL . "main'>";
             exit;
        } else {
-            // echo 'failed';
-            echo "<meta http-equiv='refresh' content='1;URL=" . BASEURL . "main'>";
+            echo $this->failedSubmit;
+            echo "<meta http-equiv='refresh' content='0;URL=" . BASEURL . "main'>";
             exit;
        }
     }
