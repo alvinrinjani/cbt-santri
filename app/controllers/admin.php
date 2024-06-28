@@ -5,6 +5,8 @@ class admin extends Controller
     private $table = DB_TABLE;
     private $db;
 
+    private $failedReset = "<script>alert('Gagal reset user!');</script>";
+
     public function __construct()
     {
         if ($_SESSION['user'] != 'alvin') {
@@ -44,6 +46,25 @@ class admin extends Controller
             echo "<meta http-equiv='refresh' content='0;URL=" . BASEURL . "admin/inputUsers'>";
             exit;
        }
+    }
+
+    public function reset()
+    {
+        if ($this->model('AdminModel')->resetUser($_POST) > 0) {
+            echo "<meta http-equiv='refresh' content='0;URL=" . BASEURL . "admin'>";
+            exit;
+        } else {
+            echo $this->failedReset;
+            echo "<meta http-equiv='refresh' content='0;URL=" . BASEURL . "admin'>";
+            exit;
+        }
+    }
+
+    public function lihatJawaban()
+    {
+        $data['jawaban'] = $this->model('AdminModel')->lihatJawaban();
+
+        $this->view('admin/jawaban', $data);
     }
 }
 

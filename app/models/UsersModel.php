@@ -15,9 +15,12 @@ class UsersModel
         $username = $_POST['username'];
         $userpass = $_POST['userpass'];
 
-        $sql = "SELECT * FROM {$this->table} WHERE username = '$username' AND userpass = '$userpass'";
+        $sql = "SELECT * FROM {$this->table} WHERE username = :username AND userpass = :userpass";
 
         $this->db->query($sql);
+        
+        $this->db->bind(':username', $username, PDO::PARAM_STR);
+        $this->db->bind(':userpass', $userpass, PDO::PARAM_STR);
         $this->db->execute();
 
         return $this->db->rowCount();
@@ -26,9 +29,12 @@ class UsersModel
     
     public function adminAuth($username, $userpass)
     {
-        $sql = "SELECT * FROM {$this->table} WHERE username = '$username' AND userpass = '$userpass' AND is_admin = 1";
+        $sql = "SELECT * FROM {$this->table} WHERE username = :username AND userpass = :userpass AND is_admin = 1";
 
         $this->db->query($sql);
+
+        $this->db->bind(':username', $username, PDO::PARAM_STR);
+        $this->db->bind(':userpass', $userpass, PDO::PARAM_STR);
         $this->db->execute();
 
         return $this->db->rowCount();

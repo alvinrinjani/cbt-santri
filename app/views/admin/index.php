@@ -32,8 +32,8 @@
                     <th>No</th>
                     <th>Nama</th>
                     <th>Password</th>
-                    <td class="text-center">Submit Answer</td>
-                    <td>Time</td>
+                    <th>Time</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -44,12 +44,16 @@
                     <?php if($user['login_status'] == '2') : ?>
                       <td class='bg-success text-white'><?= $user['username']; ?></td>
                       <td class='bg-success text-white'><?= $user['userpass']; ?></td>
-                      <td class="bg-success text-white text-center"><?= $user['login_status']; ?></td>
                       <td class="bg-success text-white"><?= $user['time_stamp']; ?></td>
+                      <td>
+                          <form action="admin/reset" method="post">
+                            <input type="hidden" name="usersession" value="<?= $user['usersession']; ?>">
+                            <!-- <button class="btn badge rounded-pill bg-info text-dark" type="submit">Reset</button> -->
+                          </form>
+                        </td>
                       <?php else :?>
                         <td><?= $user['username']; ?></td>
                         <td><?= $user['userpass']; ?></td>
-                        <td class="text-center"><?= $user['login_status']; ?></td>
                         <td><?= $user['time_stamp']; ?></td>
                     <?php endif; ?>
                 </tr>
@@ -58,7 +62,8 @@
         </table>
 
         <div>
-          <a href="login/logout"><button class="btn btn-danger mb-5" type="button">Logout</button></a>
+          <a href="<?= BASEURL; ?>login/logout"><button class="btn btn-danger mb-5" type="button">Logout</button></a>
+          <a href="<?= BASEURL; ?>admin/lihatJawaban"><button class="btn btn-success mb-5" type="button">Jawaban</button></a>
         </div>
     </div>
 
